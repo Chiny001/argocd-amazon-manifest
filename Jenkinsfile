@@ -4,7 +4,7 @@ node {
     env.IMAGE = 'chiny001/amazon'
 
     stage('Clone repository') {
-             git branch: 'main', url: 'https://github.com/Chiny001/argocd-amazon-manifest.git'  
+             git branch: 'main', url: 'https://github.com/chiny001/argocd-amazon-manifest.git'  
     }
 
     stage('Update GIT') {
@@ -14,7 +14,7 @@ node {
                         //script {def encodedPassword = URLEncoder.encode("$GIT_PASSWORD",'UTF-8')}
                         //script  {def IMAGE='chiny001/amazon'}
                         sh "git config user.email chinwekalu@gmail.com"
-                        sh "git config user.name Chiny001"
+                        sh "git config user.name chiny001"
                         //sh "git switch master"
                         sh "cat deployment.yml"
                         sh "sed -i 's+${IMAGE}.*+${IMAGE}:${DOCKERTAG}+g' deployment.yml"
