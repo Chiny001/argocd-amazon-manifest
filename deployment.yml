@@ -23,7 +23,7 @@ spec:
     spec: # Pod spec
       containers:
       - name: amazon-container
-        image: chiomeni/amazon:latest
+        image: chiomeni/amazon:1
         ports:
         - containerPort: 3000
         
